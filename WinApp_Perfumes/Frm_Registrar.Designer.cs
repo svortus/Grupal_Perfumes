@@ -82,6 +82,7 @@
             this.checkBox1.TabIndex = 27;
             this.checkBox1.Text = "Mostrar contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label1
             // 
@@ -281,6 +282,7 @@
             this.Controls.Add(this.Btn_Rsgt);
             this.Name = "Frm_Registrar";
             this.Text = "Frm_Ingresar";
+            this.Load += new System.EventHandler(this.Frm_Registrar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
