@@ -21,9 +21,9 @@ namespace WinApp_Perfumes
             if (usuario == "Master" && clave == "1234")
             {
 
-                //Frm_Menu objFM = new Frm_Menu();
-                //objFM.ShowDialog();
-                //this.Visible = false;
+                Frm_Menu objFM = new Frm_Menu();
+                objFM.ShowDialog();
+                this.Visible = false;
 
 
             }
@@ -42,8 +42,8 @@ namespace WinApp_Perfumes
 
         private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Frm_Registrar objFR = new Frm_Registrar(usc, clc);
-            objFR.Show();
+            //Frm_Registrar objFR = new Frm_Registrar(usc, clc);
+            //objFR.Show();
         }
 
         private void Cbx_Mc_CheckedChanged(object sender, EventArgs e)
