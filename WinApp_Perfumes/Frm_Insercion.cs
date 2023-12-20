@@ -70,7 +70,7 @@ namespace WinApp_Perfumes
                     }
                     else
                     {
-                        rchtxtBxDescripcion.Focus();
+                        txBxPrecio.Focus();
                     }
                 }
             }
@@ -86,7 +86,7 @@ namespace WinApp_Perfumes
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
-                    ManejarPulsacionEnter(txBxPrecio, btnIngresar, e);
+                    ManejarPulsacionEnter(txBxPrecio, rchtxtBxDescripcion, e);
                 }
                 else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 {
@@ -118,7 +118,7 @@ namespace WinApp_Perfumes
                     }
                     else
                     {
-                        txBxPrecio.Focus();
+                        btnIngresar.Focus();
                     }
                 }
             }

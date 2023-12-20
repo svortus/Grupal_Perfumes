@@ -62,12 +62,31 @@ namespace WinApp_Perfumes
 
         private void txBxCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ManejarPulsacionEnter(txBxCodigo, txBxCantidad, e);
+            ManejarPulsacionEnter(txBxCodigo, txBxPrecio, e);
         }
 
         private void txBxPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            try
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    ManejarPulsacionEnter(txBxPrecio, txBxCantidad, e);
+                }
+                else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Ingrese solo números en el campo de precio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (e.KeyChar == '.' && txBxPrecio.Text.Contains("."))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MostrarError("Error al procesar la entrada del campo: " + ex.Message);
+            }
         }
 
         private void txBxCantidad_KeyPress(object sender, KeyPressEventArgs e)
