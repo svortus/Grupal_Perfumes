@@ -250,5 +250,7 @@ namespace WinApp_Perfumes
         {
             // Código para el botón Ingresar
         }
+
+        
     }
 }
