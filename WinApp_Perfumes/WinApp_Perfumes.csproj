@@ -48,11 +48,28 @@
   <ItemGroup>
     <Compile Include="ClsOperaciones.cs" />
     <Compile Include="ClVerificar.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Factura.Designer.cs">
+      <DependentUpon>Frm_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Insercion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Insercion.Designer.cs">
+      <DependentUpon>Frm_Insercion.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
@@ -71,6 +88,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Factura.resx">
+      <DependentUpon>Frm_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Insercion.resx">
+      <DependentUpon>Frm_Insercion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +109,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

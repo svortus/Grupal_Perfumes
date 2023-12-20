@@ -22,5 +22,11 @@ namespace WinApp_Perfumes
             Frm_Insercion objInsertar = new Frm_Insercion();
             objInsertar.Show();
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Factura objFactura = new Frm_Factura();
+            objFactura.Show();
+        }
     }
 }

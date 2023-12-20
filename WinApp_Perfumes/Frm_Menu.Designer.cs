@@ -32,6 +32,7 @@
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             // inserciónToolStripMenuItem
             // 
             this.inserciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inserciónToolStripMenuItem1});
+            this.inserciónToolStripMenuItem1,
+            this.facturaciónToolStripMenuItem});
             this.inserciónToolStripMenuItem.Name = "inserciónToolStripMenuItem";
             this.inserciónToolStripMenuItem.Size = new System.Drawing.Size(32, 24);
             this.inserciónToolStripMenuItem.Text = "B";
@@ -67,6 +69,13 @@
             this.inserciónToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.inserciónToolStripMenuItem1.Text = "Inserción";
             this.inserciónToolStripMenuItem1.Click += new System.EventHandler(this.inserciónToolStripMenuItem1_Click);
+            // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.facturaciónToolStripMenuItem.Text = "Facturación";
+            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // Frm_Menu
             // 
@@ -90,5 +99,6 @@
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserciónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
     }
 }
