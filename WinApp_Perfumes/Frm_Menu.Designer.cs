@@ -30,6 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -37,7 +39,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem});
+            this.aToolStripMenuItem,
+            this.inserciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -49,6 +52,21 @@
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(33, 24);
             this.aToolStripMenuItem.Text = "A";
+            // 
+            // inserciónToolStripMenuItem
+            // 
+            this.inserciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inserciónToolStripMenuItem1});
+            this.inserciónToolStripMenuItem.Name = "inserciónToolStripMenuItem";
+            this.inserciónToolStripMenuItem.Size = new System.Drawing.Size(32, 24);
+            this.inserciónToolStripMenuItem.Text = "B";
+            // 
+            // inserciónToolStripMenuItem1
+            // 
+            this.inserciónToolStripMenuItem1.Name = "inserciónToolStripMenuItem1";
+            this.inserciónToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.inserciónToolStripMenuItem1.Text = "Inserción";
+            this.inserciónToolStripMenuItem1.Click += new System.EventHandler(this.inserciónToolStripMenuItem1_Click);
             // 
             // Frm_Menu
             // 
@@ -70,5 +88,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserciónToolStripMenuItem1;
     }
 }

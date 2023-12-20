@@ -16,5 +16,11 @@ namespace WinApp_Perfumes
         {
             InitializeComponent();
         }
+
+        private void inserciónToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_Insercion objInsertar = new Frm_Insercion();
+            objInsertar.Show();
+        }
     }
 }
