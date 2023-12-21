@@ -150,7 +150,7 @@ namespace WinApp_Perfumes
                 else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {
                     e.Handled = true;
-                    MessageBox.Show("Ingrese solo números en el campo de cantidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingrese solo números en el campo IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -202,7 +202,7 @@ namespace WinApp_Perfumes
             {
                 DataSet1 dataSet = new DataSet1();
 
-                dataSet.ReadXml("C:\\Users\\ldupa\\Downloads\\prueba.xml");
+                dataSet.ReadXml(Application.StartupPath + "\\PERFUMES.xml");
 
                 DataRow newRow = dataSet.Tbl_Factura.NewRow();
                 newRow["Cod_perfume"] = txBxCodigo.Text;
@@ -215,7 +215,7 @@ namespace WinApp_Perfumes
                 dataSet.Tbl_Factura.Rows.Add(newRow);
 
                 // Guardar los cambios
-                dataSet.WriteXml("C:\\Users\\ldupa\\Downloads\\prueba.xml");
+                dataSet.WriteXml(Application.StartupPath + "\\PERFUMES.xml");
             }
             catch (Exception ex)
             {

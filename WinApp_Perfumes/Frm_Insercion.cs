@@ -134,7 +134,7 @@ namespace WinApp_Perfumes
             {
                 DataSet1 dataSet = new DataSet1();
 
-                dataSet.ReadXml("C:\\Users\\ldupa\\Downloads\\prueba.xml");
+                dataSet.ReadXml(Application.StartupPath + "\\PERFUMES.xml");
 
                 DataRow newRow = dataSet.Tbl_Perfume.NewRow();
                 newRow["Cod_perfume"] = txBxCodigo.Text;
@@ -146,7 +146,7 @@ namespace WinApp_Perfumes
                 dataSet.Tbl_Perfume.Rows.Add(newRow);
 
                 // Guardar los cambios
-                dataSet.WriteXml("C:\\Users\\ldupa\\Downloads\\prueba.xml");
+                dataSet.WriteXml(Application.StartupPath + "\\PERFUMES.xml");
 
                 Frm_Factura objFac = new Frm_Factura();
                 objFac.CodPerfume = txBxCodigo.Text;

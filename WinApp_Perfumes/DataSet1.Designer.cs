@@ -337,7 +337,7 @@ namespace WinApp_Perfumes {
             
             private global::System.Data.DataColumn columnPrecio_perfume;
             
-            private global::System.Data.DataColumn columnDescip_Perfume;
+            private global::System.Data.DataColumn columnDescrip_Perfume;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -406,9 +406,9 @@ namespace WinApp_Perfumes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Descip_PerfumeColumn {
+            public global::System.Data.DataColumn Descrip_PerfumeColumn {
                 get {
-                    return this.columnDescip_Perfume;
+                    return this.columnDescrip_Perfume;
                 }
             }
             
@@ -449,14 +449,14 @@ namespace WinApp_Perfumes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_PerfumeRow AddTbl_PerfumeRow(string Cod_perfume, string Nom_perfume, string Tipo_perfume, string Precio_perfume, string Descip_Perfume) {
+            public Tbl_PerfumeRow AddTbl_PerfumeRow(string Cod_perfume, string Nom_perfume, string Tipo_perfume, string Precio_perfume, string Descrip_Perfume) {
                 Tbl_PerfumeRow rowTbl_PerfumeRow = ((Tbl_PerfumeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod_perfume,
                         Nom_perfume,
                         Tipo_perfume,
                         Precio_perfume,
-                        Descip_Perfume};
+                        Descrip_Perfume};
                 rowTbl_PerfumeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_PerfumeRow);
                 return rowTbl_PerfumeRow;
@@ -483,7 +483,7 @@ namespace WinApp_Perfumes {
                 this.columnNom_perfume = base.Columns["Nom_perfume"];
                 this.columnTipo_perfume = base.Columns["Tipo_perfume"];
                 this.columnPrecio_perfume = base.Columns["Precio_perfume"];
-                this.columnDescip_Perfume = base.Columns["Descip_Perfume"];
+                this.columnDescrip_Perfume = base.Columns["Descrip_Perfume"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -497,8 +497,8 @@ namespace WinApp_Perfumes {
                 base.Columns.Add(this.columnTipo_perfume);
                 this.columnPrecio_perfume = new global::System.Data.DataColumn("Precio_perfume", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecio_perfume);
-                this.columnDescip_Perfume = new global::System.Data.DataColumn("Descip_Perfume", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescip_Perfume);
+                this.columnDescrip_Perfume = new global::System.Data.DataColumn("Descrip_Perfume", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescrip_Perfume);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_perfume}, false));
                 this.columnCod_perfume.Unique = true;
@@ -1039,17 +1039,17 @@ namespace WinApp_Perfumes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Descip_Perfume {
+            public string Descrip_Perfume {
                 get {
                     try {
-                        return ((string)(this[this.tableTbl_Perfume.Descip_PerfumeColumn]));
+                        return ((string)(this[this.tableTbl_Perfume.Descrip_PerfumeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descip_Perfume\' de la tabla \'Tbl_Perfume\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descrip_Perfume\' de la tabla \'Tbl_Perfume\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Perfume.Descip_PerfumeColumn] = value;
+                    this[this.tableTbl_Perfume.Descrip_PerfumeColumn] = value;
                 }
             }
             
@@ -1103,14 +1103,14 @@ namespace WinApp_Perfumes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDescip_PerfumeNull() {
-                return this.IsNull(this.tableTbl_Perfume.Descip_PerfumeColumn);
+            public bool IsDescrip_PerfumeNull() {
+                return this.IsNull(this.tableTbl_Perfume.Descrip_PerfumeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDescip_PerfumeNull() {
-                this[this.tableTbl_Perfume.Descip_PerfumeColumn] = global::System.Convert.DBNull;
+            public void SetDescrip_PerfumeNull() {
+                this[this.tableTbl_Perfume.Descrip_PerfumeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
