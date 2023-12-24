@@ -28,5 +28,11 @@ namespace WinApp_Perfumes
             Frm_Factura objFactura = new Frm_Factura();
             objFactura.Show();
         }
+
+        private void eliminacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_EliminacionBusqueda objEliminacion = new Frm_EliminacionBusqueda();
+            objEliminacion.Show();
+        }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txBxCodigo = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,13 +55,13 @@
             this.lblCodigo.TabIndex = 35;
             this.lblCodigo.Text = "Código";
             // 
-            // txBxCodigo
+            // txtCodigo
             // 
-            this.txBxCodigo.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txBxCodigo.Location = new System.Drawing.Point(499, 262);
-            this.txBxCodigo.Name = "txBxCodigo";
-            this.txBxCodigo.Size = new System.Drawing.Size(121, 25);
-            this.txBxCodigo.TabIndex = 34;
+            this.txtCodigo.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(499, 262);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(121, 25);
+            this.txtCodigo.TabIndex = 34;
             // 
             // label2
             // 
@@ -73,25 +73,26 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Por favor, introduzca el código correspondiente al perfume que desea eliminar.";
             // 
-            // btnIngresar
+            // btnContinuar
             // 
-            this.btnIngresar.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(359, 359);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(136, 43);
-            this.btnIngresar.TabIndex = 37;
-            this.btnIngresar.Text = "Continuar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Font = new System.Drawing.Font("Cascadia Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.Location = new System.Drawing.Point(359, 359);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(136, 43);
+            this.btnContinuar.TabIndex = 37;
+            this.btnContinuar.Text = "Continuar";
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // Frm_EliminacionBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 556);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.txBxCodigo);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Name = "Frm_EliminacionBusqueda";
             this.Text = "Frm_Eliminacion";
@@ -104,8 +105,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txBxCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnContinuar;
     }
 }
