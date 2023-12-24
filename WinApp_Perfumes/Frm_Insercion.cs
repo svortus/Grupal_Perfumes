@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinApp_Perfumes.Properties;
 
 namespace WinApp_Perfumes
 {
@@ -106,6 +107,7 @@ namespace WinApp_Perfumes
 
         private void rchtxtBxDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             try
             {
                 if (e.KeyChar == (char)Keys.Enter)
