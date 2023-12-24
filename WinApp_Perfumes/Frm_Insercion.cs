@@ -16,7 +16,7 @@ namespace WinApp_Perfumes
         {
             InitializeComponent();
             DataSet1 dataSet = new DataSet1();
-            dataSet.WriteXml(Application.StartupPath + "\\PERFUMES.xml");
+            dataSet.WriteXml(Application.StartupPath + "\\Perfumes.xml");
         }
 
         private void ManejarPulsacionEnter(TextBox textBox, Control siguienteControl, KeyPressEventArgs e)
@@ -134,7 +134,7 @@ namespace WinApp_Perfumes
             {
                 DataSet1 dataSet = new DataSet1();
 
-                dataSet.ReadXml(Application.StartupPath + "\\PERFUMES.xml");
+                dataSet.ReadXml(Application.StartupPath + "\\Perfumes.xml");
 
                 DataRow newRow = dataSet.Tbl_Perfume.NewRow();
                 newRow["Cod_perfume"] = txBxCodigo.Text;
@@ -146,7 +146,7 @@ namespace WinApp_Perfumes
                 dataSet.Tbl_Perfume.Rows.Add(newRow);
 
                 // Guardar los cambios
-                dataSet.WriteXml(Application.StartupPath + "\\PERFUMES.xml");
+                dataSet.WriteXml(Application.StartupPath + "\\Perfumes.xml");
 
                 Frm_Factura objFac = new Frm_Factura();
                 objFac.CodPerfume = txBxCodigo.Text;

@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
+  <Tbl_Perfume>
+    <Cod_perfume>001</Cod_perfume>
+    <Nom_perfume>Calvin</Nom_perfume>
+    <Tipo_perfume>Amaderado</Tipo_perfume>
+    <Precio_perfume>30</Precio_perfume>
+    <Descrip_Perfume>Vibrante y energizante, este perfume despierta los sentidos con notas frescas de limón, bergamota y naranja, perfecto para días soleados.</Descrip_Perfume>
+  </Tbl_Perfume>
+  <Tbl_Perfume>
+    <Cod_perfume>002</Cod_perfume>
+    <Nom_perfume>Circles</Nom_perfume>
+    <Tipo_perfume>Oriental</Tipo_perfume>
+    <Precio_perfume>25</Precio_perfume>
+    <Descrip_Perfume>Misterioso y seductor, este perfume combina especias exóticas, vainilla y ámbar, creando una fragancia cálida y sofisticada.</Descrip_Perfume>
+  </Tbl_Perfume>
+  <Tbl_Perfume>
+    <Cod_perfume>003</Cod_perfume>
+    <Nom_perfume>Penta</Nom_perfume>
+    <Tipo_perfume>Cítrico</Tipo_perfume>
+    <Precio_perfume>50</Precio_perfume>
+    <Descrip_Perfume>Vibrante y energizante, este perfume despierta los sentidos con notas frescas de limón, bergamota y naranja, perfecto para días soleados.</Descrip_Perfume>
+  </Tbl_Perfume>
+  <Tbl_Perfume>
+    <Cod_perfume>004</Cod_perfume>
+    <Nom_perfume>Cardinal</Nom_perfume>
+    <Tipo_perfume>Unisex</Tipo_perfume>
+    <Precio_perfume>38</Precio_perfume>
+    <Descrip_Perfume>Una fragancia versátil y moderna con equilibrio de cítricos frescos, flores suaves y maderas sutiles, ideal para quienes buscan una expresión sin género en su aroma.</Descrip_Perfume>
+  </Tbl_Perfume>
+  <Tbl_Perfume>
+    <Cod_perfume>005</Cod_perfume>
+    <Nom_perfume>VanilaIce</Nom_perfume>
+    <Tipo_perfume>Floral</Tipo_perfume>
+    <Precio_perfume>64</Precio_perfume>
+    <Descrip_Perfume>Un perfume femenino con notas de rosas, jazmines y lirios, evocando la frescura y la elegancia de un jardín primaveral.</Descrip_Perfume>
+  </Tbl_Perfume>
+  <Tbl_Factura>
+    <Cod_perfume>001</Cod_perfume>
+    <Precio_perfume>30</Precio_perfume>
+    <Cantidad>3</Cantidad>
+    <IVA>5</IVA>
+    <N_factura>01</N_factura>
+    <EstadoEntrega>Entregado</EstadoEntrega>
+  </Tbl_Factura>
+  <Tbl_Factura>
+    <Cod_perfume>002</Cod_perfume>
+    <Precio_perfume>25</Precio_perfume>
+    <Cantidad>2</Cantidad>
+    <IVA>10</IVA>
+    <N_factura>02</N_factura>
+    <EstadoEntrega>Pendiente</EstadoEntrega>
+  </Tbl_Factura>
+  <Tbl_Factura>
+    <Cod_perfume>003</Cod_perfume>
+    <Precio_perfume>50</Precio_perfume>
+    <Cantidad>2</Cantidad>
+    <IVA>6</IVA>
+    <N_factura>03</N_factura>
+    <EstadoEntrega>Pendiente</EstadoEntrega>
+  </Tbl_Factura>
+  <Tbl_Factura>
+    <Cod_perfume>004</Cod_perfume>
+    <Precio_perfume>38</Precio_perfume>
+    <Cantidad>3</Cantidad>
+    <IVA>7</IVA>
+    <N_factura>04</N_factura>
+    <EstadoEntrega>Entregado</EstadoEntrega>
+  </Tbl_Factura>
+  <Tbl_Factura>
+    <Cod_perfume>005</Cod_perfume>
+    <Precio_perfume>64</Precio_perfume>
+    <Cantidad>4</Cantidad>
+    <IVA>5</IVA>
+    <N_factura>05</N_factura>
+    <EstadoEntrega>Pendiente</EstadoEntrega>
+  </Tbl_Factura>
+</DataSet1>
