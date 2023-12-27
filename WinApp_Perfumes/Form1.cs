@@ -46,6 +46,30 @@ namespace WinApp_Perfumes
             //objFR.Show();
         }
 
+        private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                Txt_Clave.Focus();
+            }
+        }
+
+        private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                Btn_Ingresar.Focus();
+            }
+        }
+
+        private void Btn_Ingresar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                Btn_Ingresar_Click(sender,e);
+            }
+        }
+
         private void Cbx_Mc_CheckedChanged(object sender, EventArgs e)
         {
             if (Cbx_Mc.Checked)

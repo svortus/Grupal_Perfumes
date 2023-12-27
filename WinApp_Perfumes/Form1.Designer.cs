@@ -93,6 +93,7 @@
             this.Txt_Clave.PasswordChar = '*';
             this.Txt_Clave.Size = new System.Drawing.Size(169, 25);
             this.Txt_Clave.TabIndex = 11;
+            this.Txt_Clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Clave_KeyPress);
             // 
             // Txt_Usuario
             // 
@@ -103,6 +104,7 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(169, 25);
             this.Txt_Usuario.TabIndex = 10;
+            this.Txt_Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Usuario_KeyPress);
             // 
             // Btn_Ingresar
             // 
@@ -115,13 +117,14 @@
             this.Btn_Ingresar.Text = "Ingresar";
             this.Btn_Ingresar.UseVisualStyleBackColor = true;
             this.Btn_Ingresar.Click += new System.EventHandler(this.Btn_Ingresar_Click);
+            this.Btn_Ingresar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Btn_Ingresar_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(217)))), ((int)(((byte)(251)))));
             this.label2.Font = new System.Drawing.Font("Cascadia Mono", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(307, 9);
+            this.label2.Location = new System.Drawing.Point(342, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 44);
             this.label2.TabIndex = 16;
