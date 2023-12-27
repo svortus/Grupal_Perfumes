@@ -34,11 +34,5 @@ namespace WinApp_Perfumes
             Frm_EliminacionBusqueda objEliminacion = new Frm_EliminacionBusqueda();
             objEliminacion.Show();
         }
-
-        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_Reportes objRep = new Frm_Reportes();
-            objRep.Show();
-        }
     }
 }
