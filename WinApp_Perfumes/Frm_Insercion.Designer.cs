@@ -198,6 +198,7 @@
             this.Controls.Add(this.btnIngresar);
             this.Name = "Frm_Insercion";
             this.Text = "Frm_Insercion";
+            this.Load += new System.EventHandler(this.Frm_Insercion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

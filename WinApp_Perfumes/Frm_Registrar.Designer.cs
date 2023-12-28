@@ -45,12 +45,12 @@
             this.Txt_Clave = new System.Windows.Forms.TextBox();
             this.Txt_Edad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Txt_Fecha = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Txt_Correo = new System.Windows.Forms.TextBox();
             this.dataSet11 = new WinApp_Perfumes.DataSet1();
             this.label10 = new System.Windows.Forms.Label();
             this.Cbx_Ciudad = new System.Windows.Forms.ComboBox();
+            this.DtTm_Fecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.Btn_Cancelar.TabIndex = 29;
             this.Btn_Cancelar.Text = "Cancelar";
             this.Btn_Cancelar.UseVisualStyleBackColor = true;
+            this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 
             // label2
             // 
@@ -104,9 +105,9 @@
             this.Txt_Apellido.Location = new System.Drawing.Point(209, 205);
             this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Apellido.Name = "Txt_Apellido";
-            this.Txt_Apellido.PasswordChar = '*';
             this.Txt_Apellido.Size = new System.Drawing.Size(169, 25);
             this.Txt_Apellido.TabIndex = 25;
+            this.Txt_Apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Apellido_KeyPress);
             // 
             // label4
             // 
@@ -134,9 +135,9 @@
             this.Txt_Nombre.Location = new System.Drawing.Point(209, 146);
             this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.PasswordChar = '*';
             this.Txt_Nombre.Size = new System.Drawing.Size(169, 25);
             this.Txt_Nombre.TabIndex = 22;
+            this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Nombre_KeyPress);
             // 
             // Txt_Cedula
             // 
@@ -147,6 +148,8 @@
             this.Txt_Cedula.Name = "Txt_Cedula";
             this.Txt_Cedula.Size = new System.Drawing.Size(169, 25);
             this.Txt_Cedula.TabIndex = 21;
+            this.Txt_Cedula.TextChanged += new System.EventHandler(this.Txt_Cedula_TextChanged);
+            this.Txt_Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cedula_KeyPress);
             // 
             // Btn_Rsgt
             // 
@@ -159,6 +162,7 @@
             this.Btn_Rsgt.Text = "Registrarse";
             this.Btn_Rsgt.UseVisualStyleBackColor = true;
             this.Btn_Rsgt.Click += new System.EventHandler(this.Btn_Rsgt_Click);
+            this.Btn_Rsgt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Btn_Rsgt_KeyPress);
             // 
             // label5
             // 
@@ -179,6 +183,7 @@
             this.Txt_Clave2.PasswordChar = '*';
             this.Txt_Clave2.Size = new System.Drawing.Size(169, 25);
             this.Txt_Clave2.TabIndex = 34;
+            this.Txt_Clave2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Clave2_KeyPress);
             // 
             // label6
             // 
@@ -209,6 +214,7 @@
             this.Txt_Clave.PasswordChar = '*';
             this.Txt_Clave.Size = new System.Drawing.Size(169, 25);
             this.Txt_Clave.TabIndex = 31;
+            this.Txt_Clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Clave_KeyPress);
             // 
             // Txt_Edad
             // 
@@ -230,16 +236,6 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "Fecha de Nacimiento:";
             // 
-            // Txt_Fecha
-            // 
-            this.Txt_Fecha.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Fecha.Location = new System.Drawing.Point(210, 264);
-            this.Txt_Fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Txt_Fecha.Name = "Txt_Fecha";
-            this.Txt_Fecha.PasswordChar = '*';
-            this.Txt_Fecha.Size = new System.Drawing.Size(169, 25);
-            this.Txt_Fecha.TabIndex = 37;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -256,9 +252,9 @@
             this.Txt_Correo.Location = new System.Drawing.Point(423, 146);
             this.Txt_Correo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Correo.Name = "Txt_Correo";
-            this.Txt_Correo.PasswordChar = '*';
             this.Txt_Correo.Size = new System.Drawing.Size(169, 25);
             this.Txt_Correo.TabIndex = 38;
+            this.Txt_Correo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Correo_KeyPress);
             // 
             // dataSet11
             // 
@@ -279,21 +275,58 @@
             // 
             this.Cbx_Ciudad.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbx_Ciudad.FormattingEnabled = true;
+            this.Cbx_Ciudad.Items.AddRange(new object[] {
+            "Esmeraldas",
+            "Quito",
+            "Riobamba",
+            "Santo Domingo",
+            "Portoviejo",
+            "Cuenca",
+            "Guaranda",
+            "Azogues",
+            "Tulcán",
+            "Latacunga",
+            "Machala",
+            "Puerto Baquerizo",
+            "Guayaquil",
+            "Ibarra",
+            "Loja",
+            "Babahoyo",
+            "Macas",
+            "Tena",
+            "F. de Orellana",
+            "Puyo",
+            "Santa Elena",
+            "Nueva Loja",
+            "Ambato ",
+            "Zamora"});
             this.Cbx_Ciudad.Location = new System.Drawing.Point(210, 323);
             this.Cbx_Ciudad.Name = "Cbx_Ciudad";
             this.Cbx_Ciudad.Size = new System.Drawing.Size(165, 28);
             this.Cbx_Ciudad.TabIndex = 41;
+            this.Cbx_Ciudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Cbx_Ciudad_KeyPress);
+            // 
+            // DtTm_Fecha
+            // 
+            this.DtTm_Fecha.CalendarFont = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtTm_Fecha.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtTm_Fecha.Location = new System.Drawing.Point(210, 264);
+            this.DtTm_Fecha.Name = "DtTm_Fecha";
+            this.DtTm_Fecha.Size = new System.Drawing.Size(165, 25);
+            this.DtTm_Fecha.TabIndex = 42;
+            this.DtTm_Fecha.ValueChanged += new System.EventHandler(this.DtTm_Fecha_ValueChanged);
+            this.DtTm_Fecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DtTm_Fecha_KeyPress);
             // 
             // Frm_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DtTm_Fecha);
             this.Controls.Add(this.Cbx_Ciudad);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Txt_Correo);
-            this.Controls.Add(this.Txt_Fecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Txt_Clave2);
@@ -339,11 +372,11 @@
         private System.Windows.Forms.TextBox Txt_Clave;
         private System.Windows.Forms.TextBox Txt_Edad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Txt_Fecha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Txt_Correo;
         private DataSet1 dataSet11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox Cbx_Ciudad;
+        private System.Windows.Forms.DateTimePicker DtTm_Fecha;
     }
 }

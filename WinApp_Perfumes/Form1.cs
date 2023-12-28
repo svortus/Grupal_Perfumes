@@ -13,11 +13,14 @@ namespace WinApp_Perfumes
     public partial class Form1 : Form
     {
         string usuario = "", clave = "", usc, clc;
-
+        
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
+            dataSet11.ReadXml(Application.StartupPath + "\\Perfumes.xml");
             clave = Txt_Clave.Text;
             usuario = Txt_Usuario.Text;
+            string datCorreo = Convert.ToString(dataSet11.Tbl_Usuario.Select("Correo='"+ usc +"'"));
+            string datClave = Convert.ToString(dataSet11.Tbl_Usuario.Select("Clave='"+ clc +"'"));
             if (usuario == "Master" && clave == "1234")
             {
 
@@ -27,12 +30,13 @@ namespace WinApp_Perfumes
 
 
             }
-            else if (usuario == usc && clave == clc)
+            else if 
+            (usuario ==  datCorreo && clave == datClave)
             {
 
-                //Frm_Menu objFM = new Frm_Menu();
-                //objFM.ShowDialog();//c
-                //this.Visible = false;
+                Frm_Menu objFM = new Frm_Menu();
+                objFM.ShowDialog();
+                this.Visible = false;
             }
             else
             {
@@ -42,8 +46,8 @@ namespace WinApp_Perfumes
 
         private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Frm_Registrar objFR = new Frm_Registrar(usc, clc);
-            //objFR.Show();
+            Frm_Registrar objFR = new Frm_Registrar(usc, clc);
+            objFR.Show();
         }
 
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)

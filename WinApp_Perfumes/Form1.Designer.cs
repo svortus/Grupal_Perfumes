@@ -36,6 +36,8 @@
             this.Txt_Usuario = new System.Windows.Forms.TextBox();
             this.Btn_Ingresar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataSet11 = new WinApp_Perfumes.DataSet1();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // Cbx_Mc
@@ -130,6 +132,11 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Bienvenido";
             // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,6 +153,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +169,7 @@
         private System.Windows.Forms.TextBox Txt_Usuario;
         private System.Windows.Forms.Button Btn_Ingresar;
         private System.Windows.Forms.Label label2;
+        private DataSet1 dataSet11;
     }
 }
 

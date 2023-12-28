@@ -168,5 +168,10 @@ namespace WinApp_Perfumes
             rchtxtBxDescripcion.Clear();
             txBxPrecio.Clear();
         }
+
+        private void Frm_Insercion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
