@@ -19,8 +19,11 @@ namespace WinApp_Perfumes
             dataSet11.ReadXml(Application.StartupPath + "\\Perfumes.xml");
             clave = Txt_Clave.Text;
             usuario = Txt_Usuario.Text;
-            string datCorreo = Convert.ToString(dataSet11.Tbl_Usuario.Select("Correo='"+ usc +"'"));
-            string datClave = Convert.ToString(dataSet11.Tbl_Usuario.Select("Clave='"+ clc +"'"));
+            System.Data.DataRow[] vec;
+            vec = dataSet11.Tbl_Usuario.Select("Correo='" + usuario + "'");
+            string datCorreo = vec[0]["Correo"].ToString();
+            string datClave = vec[0]["Clave"].ToString();
+            
             if (usuario == "Master" && clave == "1234")
             {
 
