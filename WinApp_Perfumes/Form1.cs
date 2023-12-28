@@ -16,7 +16,7 @@ namespace WinApp_Perfumes
         
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-            dataSet11.ReadXml(Application.StartupPath + "\\Perfumes.xml");
+            
             clave = Txt_Clave.Text;
             usuario = Txt_Usuario.Text;
             System.Data.DataRow[] vec;
@@ -98,7 +98,7 @@ namespace WinApp_Perfumes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dataSet11.ReadXml(Application.StartupPath + "\\Perfumes.xml");
         }
     }
 }
