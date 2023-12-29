@@ -13,7 +13,8 @@ namespace WinApp_Perfumes
     public partial class Form1 : Form
     {
         string usuario = "", clave = "", usc, clc;
-        
+        string datCorreo, datClave;
+
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
             
@@ -21,20 +22,20 @@ namespace WinApp_Perfumes
             usuario = Txt_Usuario.Text;
             System.Data.DataRow[] vec;
             vec = dataSet11.Tbl_Usuario.Select("Correo='" + usuario + "'");
-            string datCorreo = vec[0]["Correo"].ToString();
-            string datClave = vec[0]["Clave"].ToString();
             
-            if (usuario == "Master" && clave == "1234")
+            if (vec.Length != 0)
             {
-
+                datCorreo = vec[0]["Correo"].ToString();
+                datClave = vec[0]["Clave"].ToString();
+            }
+            
+            if (usuario == "Master@gmail.com" && clave == "1234")
+            {
                 Frm_Menu objFM = new Frm_Menu();
                 objFM.ShowDialog();
                 this.Visible = false;
-
-
             }
-            else if 
-            (usuario ==  datCorreo && clave == datClave)
+            else if (usuario ==  datCorreo && clave == datClave)
             {
 
                 Frm_Menu objFM = new Frm_Menu();
@@ -43,6 +44,7 @@ namespace WinApp_Perfumes
             }
             else
             {
+                
                 MessageBox.Show("Credenciales incorrectas");
             }
         }
