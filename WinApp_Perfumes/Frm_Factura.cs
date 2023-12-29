@@ -29,7 +29,7 @@ namespace WinApp_Perfumes
                 {
                     if (string.IsNullOrWhiteSpace(textBox.Text))
                     {
-                        MessageBox.Show("El campo no puede estar vacío.", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MostrarError("El campo no puede estar vacío.");
                         e.Handled = true;
                     }
                     else
@@ -82,6 +82,11 @@ namespace WinApp_Perfumes
                 {
                     e.Handled = true;
                 }
+                else if (e.KeyChar == '-' && txBxPrecio.Text.Length > 0)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Ingrese solo números positivos en el campo de precio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -101,6 +106,11 @@ namespace WinApp_Perfumes
                 {
                     e.Handled = true;
                     MessageBox.Show("Ingrese solo números enteros en el campo de cantidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (e.KeyChar == '-' && txBxCantidad.Text.Length > 0)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Ingrese solo números positivos en el campo de cantidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -123,14 +133,10 @@ namespace WinApp_Perfumes
                     e.Handled = true;
                     MessageBox.Show("Por favor, ingrese solo números enteros en el campo de IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else if (e.KeyChar == '-' && txBxIva.Text.Length > 0)
                 {
-                    string nuevoTexto = txBxIva.Text + e.KeyChar;
-
-                    if (!string.IsNullOrEmpty(nuevoTexto) && !int.TryParse(nuevoTexto, out _))
-                    {
-                        e.Handled = true;
-                    }
+                    e.Handled = true;
+                    MessageBox.Show("Ingrese solo números positivos en el campo de IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -150,7 +156,12 @@ namespace WinApp_Perfumes
                 else if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {
                     e.Handled = true;
-                    MessageBox.Show("Ingrese solo números en el campo IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingrese solo números en el campo de IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (e.KeyChar == '-' && txBxFactura.Text.Length > 0)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Ingrese solo números positivos en el campo de factura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
