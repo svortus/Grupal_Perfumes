@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace WinApp_Perfumes
                 {
                     if (string.IsNullOrWhiteSpace(textBox.Text))
                     {
-                        MessageBox.Show("El campo no puede estar vacío.", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MostrarError("El campo no puede estar vacío.");
                         e.Handled = true;
                     }
                     else
@@ -64,7 +65,7 @@ namespace WinApp_Perfumes
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
-                    if (string.IsNullOrWhiteSpace(txBxCodigo.Text))
+                    if (string.IsNullOrWhiteSpace(CboxTipos.Text)) // Corregir para verificar CboxTipos en lugar de txBxCodigo
                     {
                         MessageBox.Show("El campo no puede estar vacío.", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         e.Handled = true;
@@ -134,25 +135,28 @@ namespace WinApp_Perfumes
         {
             try
             {
-                DataSet1 dataSet = new DataSet1();
+                // Utiliza el bloque using para asegurarte de liberar recursos adecuadamente
+                using (DataSet1 dataSet = new DataSet1())
+                {
+                    string filePath = Path.Combine(Application.StartupPath, "Perfumes.xml");
+                    dataSet.ReadXml(filePath);
 
-                dataSet.ReadXml(Application.StartupPath + "\\Perfumes.xml");
+                    DataRow newRow = dataSet.Tbl_Perfume.NewRow();
+                    newRow["Cod_perfume"] = txBxCodigo.Text;
+                    newRow["Nom_perfume"] = txBxNombre.Text;
+                    newRow["Tipo_perfume"] = CboxTipos.Text;
+                    newRow["Precio_perfume"] = txBxPrecio.Text;
+                    newRow["Descrip_perfume"] = rchtxtBxDescripcion.Text;
 
-                DataRow newRow = dataSet.Tbl_Perfume.NewRow();
-                newRow["Cod_perfume"] = txBxCodigo.Text;
-                newRow["Nom_perfume"] = txBxNombre.Text;
-                newRow["Tipo_perfume"] = CboxTipos.Text;
-                newRow["Precio_perfume"] = txBxPrecio.Text;
-                newRow["Descrip_perfume"] = rchtxtBxDescripcion.Text;
+                    dataSet.Tbl_Perfume.Rows.Add(newRow);
 
-                dataSet.Tbl_Perfume.Rows.Add(newRow);
+                    // Guardar los cambios
+                    dataSet.WriteXml(filePath);
 
-                // Guardar los cambios
-                dataSet.WriteXml(Application.StartupPath + "\\Perfumes.xml");
-
-                Frm_Factura objFac = new Frm_Factura();
-                objFac.CodPerfume = txBxCodigo.Text;
-                objFac.PrecioPerfume = txBxPrecio.Text;
+                    Frm_Factura objFac = new Frm_Factura();
+                    objFac.CodPerfume = txBxCodigo.Text;
+                    objFac.PrecioPerfume = txBxPrecio.Text;
+                }
             }
             catch (Exception ex)
             {
