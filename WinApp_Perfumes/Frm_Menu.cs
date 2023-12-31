@@ -34,5 +34,11 @@ namespace WinApp_Perfumes
             Frm_EliminacionBusqueda objEliminacion = new Frm_EliminacionBusqueda();
             objEliminacion.Show();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_BuscarEditar objBE = new Frm_BuscarEditar();
+            objBE.Show();
+        }
     }
 }

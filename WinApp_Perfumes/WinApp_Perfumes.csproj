@@ -59,6 +59,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_BuscarEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BuscarEditar.Designer.cs">
+      <DependentUpon>Frm_BuscarEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Editar.Designer.cs">
+      <DependentUpon>Frm_Editar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Eliminacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BuscarEditar.resx">
+      <DependentUpon>Frm_BuscarEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Editar.resx">
+      <DependentUpon>Frm_Editar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Eliminacion.resx">
       <DependentUpon>Frm_Eliminacion.cs</DependentUpon>
